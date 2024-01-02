@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JavaScript</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            width: 600px; 
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            margin: 20px 0;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+            margin: auto;
+            width: 150px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+        }
+
+        .button-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Tugas Individu JavaScript</h1>
+        <div class="nav">
+            <a href="tugas1.html" onclick="showAlert('Tugas 1')">Tugas 1</a>
+            <a href="tugas2.html" onclick="showAlert('Tugas 2')">Tugas 2</a>
+            <a href="tugas3.html" onclick="showAlert('Tugas 3')">Tugas 3</a>
+            <a href="tugas4.html" onclick="showAlert('Tugas 4')">Tugas 4</a>
+            <a href="tugas5.html" onclick="showAlert('Tugas 5')">Tugas 5</a>
+        </div>
+    </div>
+
+    <script>
+        function showAlert(tugasName) {
+            alert('Anda membuka: ' + tugasName);
+        }
+    </script>
+</body>
+</html>

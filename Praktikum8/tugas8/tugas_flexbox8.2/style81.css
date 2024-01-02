@@ -1,0 +1,75 @@
+* {background-color: pink;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2%;
+}
+
+main{
+    display: flex;
+    margin: 2%;
+}
+
+aside {
+    background: rgb(241, 126, 145);
+    order: 1;
+    flex: 1;
+    
+}
+
+.article {
+    background-color: bisque;
+    flex: 2;
+    order: 1;
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak menjadi kolom */
+    margin-left: 2%;
+    text-align: center; /* Mengatur teks menjadi di tengah */
+}
+
+.article p {
+    background-color: bisque;
+    margin-top: 70px;
+}
+
+.img {
+    background-color: bisque;
+    display: flex;
+    gap: 10px; /* Menambahkan jarak antar gambar */
+    justify-content: center; /* Mengatur gambar menjadi di tengah */
+}
+
+.img img {
+    background-color: bisque;
+    padding: 25px;
+    max-width: 30vh; /* Agar gambar tidak melebihi lebar container */
+}
+
+footer{
+    padding: 10px;
+    margin: 2%;
+}
+
+.article, aside{
+    width: 50vh;
+    height: 55vh;
+}
+
+header, footer {
+    background: khaki;
+    height: 15vh;
+}
+header, footer, aside {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    

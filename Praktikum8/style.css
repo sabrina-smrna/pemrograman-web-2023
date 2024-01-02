@@ -1,0 +1,23 @@
+img{
+    width: 25%;
+}
+
+nav ul{
+    display: flex;
+    background-color: rgb(148, 255, 255);
+    list-style-type: none;
+    align-items: center;
+}
+
+nav li.about{
+    margin-left: auto;
+}
+
+nav li{
+    padding-left: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

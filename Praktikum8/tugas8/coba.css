@@ -1,0 +1,52 @@
+header {
+    background-color: darkmagenta;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 2%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin: 2%;
+}
+
+aside {
+    background-color: deeppink;
+    padding:  10px;
+    flex: 1;
+}
+
+.article {
+    background-color: lawngreen;
+    flex: 3;
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    padding: 20px;
+    max-width: 25%;
+}
+
+footer {
+    background-color: gold;
+    text-align: center;
+    padding: 10px;
+    margin: 2%;
+}

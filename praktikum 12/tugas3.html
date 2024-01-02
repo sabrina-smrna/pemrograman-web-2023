@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbox</title>
+    <style>
+      /* Style untuk chatbox */
+      .chat-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .chat-box {
+        width: 300px;
+        height: 400px; /* Set tinggi kotak chat */
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box; /* Biar padding tidak menambah lebar dan tinggi */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-messages {
+        flex: 1;
+        max-height: 300px; /* Set tinggi maksimum area pesan */
+        overflow-y: auto;
+        margin-bottom: 10px;
+      }
+
+      /* Bubble chat */
+      .pesan {
+        max-width: 70%; /* Maksimum lebar bubble chat */
+        background-color: #4caf50;
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        align-self: flex-start;
+      }
+
+      .pesan-saya {
+        max-width: 70%; /* Maksimum lebar bubble chat */
+        background-color: #2196f3;
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        align-self: flex-end;
+      }
+
+      /* Style untuk input tulis pesan dan tombol kirim */
+      .input-container {
+        display: flex;
+        gap: 10px; /* Jarak antara input dan tombol */
+      }
+
+      input {
+        flex: 1;
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+
+      button {
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Chatbox -->
+    <div class="chat-container">
+      <div class="chat-box" id="kotakObrolan">
+        <div class="chat-messages" id="pesanObrolan">
+          <div class="pesan">Halo, apa kabar?</div>
+          <div class="pesan-saya">Hai! Saya baik, terima kasih.</div>
+        </div>
+        <div class="input-container">
+          <input
+            onchange="kirimPesan()"
+            type="text"
+            id="inputPesan"
+            placeholder="Tulis pesan..."
+          />
+          <button>Kirim</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function kirimPesan() {
+        let inputPesan = document.getElementById("inputPesan");
+        let pesanObrolan = document.getElementById("pesanObrolan");
+
+        let teksPesan = inputPesan.value;
+
+        if (teksPesan.trim() !== "") {
+          let pesanBaru = document.createElement("div");
+          pesanBaru.textContent = teksPesan;
+          pesanBaru.classList.add("pesan-saya");
+
+          pesanObrolan.appendChild(pesanBaru);
+          pesanObrolan.scrollTop = pesanObrolan.scrollHeight; // Auto-scroll ke pesan terbaru
+
+          inputPesan.value = ""; // Reset input setelah pesan dikirim
+        }
+      }
+    </script>
+  </body>
+</html>

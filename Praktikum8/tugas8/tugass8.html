@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox1</title>
+
+    <style>
+        header {
+            background-color: darkmagenta;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        aside {
+            background-color: deeppink;
+            padding:  10px;
+            flex: 1;
+        }
+
+        article {
+            background-color: lawngreen;
+            flex: 3;
+            padding: 10px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            padding: 20px;
+            max-width: 25%;
+        }
+
+        footer {
+            background-color: gold;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <!-- Baris 1 -->
+        <header>Tampilan Header</header>
+
+        <!-- Baris 2 -->
+        <!-- main -->
+        <main>
+            <!-- aside -->
+            <aside>  Aside   </aside>
+                <article>
+                    <img src="https://i.pinimg.com/736x/e1/98/44/e19844439b3ed3fa3f9576bd0cf07c6d.jpg" alt="">
+                    <img src="https://1.bp.blogspot.com/-UmKtUGhihgU/X5L0kzTk84I/AAAAAAAAb6s/ZnF99UOzXLUSCCnPezwZ1oskAs0Fn_WFwCLcBGAsYHQ/s16000/20201023_205948.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/fc/f2/35/fcf2358a31929f743501b55361d5a8cb.jpg" alt="">
+                </article>
+          
+        </main>
+
+        <footer>
+                Footer
+        </footer>
+   </div>
+</body>
+</html>

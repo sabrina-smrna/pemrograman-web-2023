@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+
+<html lang="en" data-xadprotection="true">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    .dismissButton {
+      background-color: #fff;
+      border: 1px solid #dadce0;
+      color: #1a73e8;
+      border-radius: 4px;
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+      height: 36px;
+      cursor: pointer;
+      padding: 0 24px
+    }
+
+    .dismissButton:hover {
+      background-color: rgba(66, 133, 244, 0.04);
+      border: 1px solid #d2e3fc
+    }
+
+    .dismissButton:focus {
+      background-color: rgba(66, 133, 244, 0.12);
+      border: 1px solid #d2e3fc;
+      outline: 0
+    }
+
+    .dismissButton:hover:focus {
+      background-color: rgba(66, 133, 244, 0.16);
+      border: 1px solid #d2e2fd
+    }
+
+    .dismissButton:active {
+      background-color: rgba(66, 133, 244, 0.16);
+      border: 1px solid #d2e2fd;
+      box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
+    }
+
+    .dismissButton:disabled {
+      background-color: #fff;
+      border: 1px solid #f1f3f4;
+      color: #3c4043
+    }
+  </style>
+  <style>
+    .gm-style .gm-style-mtc label,
+    .gm-style .gm-style-mtc div {
+      font-weight: 400
+    }
+
+    .gm-style .gm-style-mtc ul,
+    .gm-style .gm-style-mtc li {
+      box-sizing: border-box
+    }
+  </style>
+  <style>
+    .gm-control-active>img {
+      box-sizing: content-box;
+      display: none;
+      left: 50%;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .gm-control-active>img:nth-child(1) {
+      display: block
+    }
+
+    .gm-control-active:hover>img:nth-child(1),
+    .gm-control-active:active>img:nth-child(1) {
+      display: none
+    }
+
+    .gm-control-active:hover>img:nth-child(2),
+    .gm-control-active:active>img:nth-child(3) {
+      display: block
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/css">
+  <style>
+    .gm-ui-hover-effect {
+      opacity: .6
+    }
+
+    .gm-ui-hover-effect:hover {
+      opacity: 1
+    }
+  </style>
+  <style>
+    .gm-style .gm-style-cc span,
+    .gm-style .gm-style-cc a,
+    .gm-style .gm-style-mtc div {
+      font-size: 10px;
+      box-sizing: border-box
+    }
+  </style>
+  <style>
+    @media print {
+
+      .gm-style .gmnoprint,
+      .gmnoprint {
+        display: none
+      }
+    }
+
+    @media screen {
+
+      .gm-style .gmnoscreen,
+      .gmnoscreen {
+        display: none
+      }
+    }
+  </style>
+  <style>
+    .gm-style-pbc {
+      transition: opacity ease-in-out;
+      background-color: rgba(0, 0, 0, 0.45);
+      text-align: center
+    }
+
+    .gm-style-pbt {
+      font-size: 22px;
+      color: white;
+      font-family: Roboto, Arial, sans-serif;
+      position: relative;
+      margin: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%)
+    }
+  </style>
+  <style>
+    .gm-style img {
+      max-width: none;
+    }
+
+    .gm-style {
+      font: 400 11px Roboto, Arial, sans-serif;
+      text-decoration: none;
+    }
+  </style>
+  <style>
+    #wrapper {
+      width: 100%;
+      max-width: 964px;
+      position: relative;
+    }
+
+    #carousel {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel1 {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel2 {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #carousel1::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #carousel2::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #prev,
+    #next {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev1,
+    #next1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev2,
+    #next2 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #prev1 {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #prev2 {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #next {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #next1 {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #next2 {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #content {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    #content1 {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    #content2 {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    .item {
+      width: 200px;
+    }
+
+    .item1 {
+      width: 100%;
+    }
+  </style>
+  <style>
+    .review-item__title {
+      margin-bottom: 13px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.44;
+    }
+
+    .review-item__user {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 30px;
+    }
+
+    .review-item__avatar {
+      width: 50px;
+      height: 50px;
+      margin-right: 13px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .review-item__info {
+      margin-right: 14px;
+    }
+
+    .review-item__name {
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .review-item__position {
+      color: #888888;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .review-item__stars {
+      margin-top: -15px;
+    }
+  </style>
+  <style>
+    .video-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .video-container::after {
+      padding-top: 56.25%;
+      display: block;
+      content: '';
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <title>Home - Captain Barbershop</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="http://captainbarbershop.co.id/assets-frontend/css(1)" rel="stylesheet">
+  <link href="http://captainbarbershop.co.id/assets-frontend/css(2)" rel="stylesheet">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/animate.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/owl.carousel.min.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/owl.theme.default.min.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/magnific-popup.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/aos.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/ionicons.min.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/jquery.timepicker.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/flaticon.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/icomoon.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/style.css">
+  <link rel="shortcut icon" href="http://captainbarbershop.co.id/assets-frontend/images/favicon.png" />
+  <style type="text/css">
+    .scrollax-performance,
+    .scrollax-performance *,
+    .scrollax-performance *:before,
+    .scrollax-performance *:after {
+      pointer-events: none !important;
+      -webkit-animation-play-state: paused !important;
+      animation-play-state: paused !important;
+    }
+  </style>
+
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/slick/slick.css">
+  <link rel="stylesheet" href="http://captainbarbershop.co.id/assets-frontend/slick/slick-theme.css">
+
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/common.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/util.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/map.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/stats.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/onion.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/controls.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="http://captainbarbershop.co.id/assets-frontend/marker.js"></script>
+
+</head>
+
+<body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled awake" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="http://captainbarbershop.co.id/"><img style="max-height: 50px;" src="http://captainbarbershop.co.id/assets-frontend/images/logo.png" class="img-fluid" alt="Captain Barbershop"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Home</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/lokasi" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Lokasi</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/tentang" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Tentang Kami</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/kontak" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Kontak</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/karir" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Karir</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/faq" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">FAQ</a></li>
+        <li class="nav-item "><a href="http://captainbarbershop.co.id/trend" class="nav-link" style="background-color: #1b1b1b85; border-radius: 10px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px;">Tren Rambut</a></li>
+        <li style="color: #fff;" class="nav-item "><a href="http://captainbarbershop.co.id/captain-academy" class="nav-link" style="background-color: #ce9c6b; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; color: #fff;">Captain Academy</a></li>
+        <li class="" style="margin-right: 30px;">
+        <a class="nav-link" style="margin-right: -95px; padding-right: 5px; padding-left: 5px; padding-top: 5px; padding-bottom: 5px;" href="http://captainbarbershop.co.id/bahasa/gantibahasa/indonesia">
+          <object data="http://captainbarbershop.co.id/uploads/flag/ind.svg" type="image/svg+xml" style="height: 25px;pointer-events: none;"></object>
+        </a>
+        </li>
+        <li class="" >
+        <a class="nav-link" style="margin-right: -55px; padding-left: 5px; padding-top: 5px; padding-bottom: 5px;" href="http://captainbarbershop.co.id/bahasa/gantibahasa/inggris">
+          <object data="http://captainbarbershop.co.id/uploads/flag/eng.svg" type="image/svg+xml" style="height: 25px;pointer-events: none;"></object>
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="http://captainbarbershop.co.id/lokasi">
+                        <img class="d-block w-100" src="http://captainbarbershop.co.id/uploads/header/FA2D4F8894D038413BA2FE8CD99F366D.jpg" alt="First slide">
+                        </a>
+                    <div class="carousel-caption">
+            <h1></h1>
+            <p style="font-size: 20px;"></p>
+          </div>
+        </div>
+                      <div class="carousel-item ">
+                      <img class="d-block w-100" src="http://captainbarbershop.co.id/uploads/header/FAA5ACB8F99E4B75259BB3FCD0A5228C.jpg" alt="First slide">
+                      <div class="carousel-caption">
+            <h1></h1>
+            <p style="font-size: 20px;"></p>
+          </div>
+        </div>
+                      <div class="carousel-item ">
+                      <img class="d-block w-100" src="http://captainbarbershop.co.id/uploads/header/423EBF4134DD623D08A81789C8F54E83.jpg" alt="First slide">
+                      <div class="carousel-caption">
+            <h1></h1>
+            <p style="font-size: 20px;"></p>
+          </div>
+        </div>
+                      <div class="carousel-item ">
+                      <img class="d-block w-100" src="http://captainbarbershop.co.id/uploads/header/9843CC6B749474D19CC6A80741E37EE2.jpg" alt="First slide">
+                      <div class="carousel-caption">
+            <h1></h1>
+            <p style="font-size: 20px;"></p>
+          </div>
+        </div>
+                  </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span style="background-color: #000000; border-radius: 10px; padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span style="background-color: #000000; border-radius: 10px; padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <section class="ftco-intro">
+    <div class="container-wrap">
+      <div class="wrap d-md-flex align-items-end">
+        <div class="info">
+          <div class="row no-gutters">
+            <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+
+              <div class="icon"><a href="https://wa.me/6281280777736"><span class="icon-whatsapp"></span></a></div>
+              <div class="text">
+                <a href="https://wa.me/6281280777736">
+                  <h3>0812 8077 7736</h3>
+                </a>
+                <p>Layanan Pelanggan</p>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+              <div class="icon"><span class="icon-my_location"></span></div>
+              <div class="text" style="margin-right: 10px;">
+                <h3>Jl. Samanhudi No.49-51, Pasar Baru. Jakarta Pusat. 10710</h3>
+                <p>Kantor pusat</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+              <div class="icon"><span class="icon-clock-o"></span></div>
+              <div class="text">
+                <h3>Buka Senin-Minggu</h3>
+                <p>10.00 – 21.00 (Last order 20.30)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social pl-md-5 p-4">
+          <ul class="social-icon">
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.tiktok.com/@captainbarbershopid?lang=en"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                  <path d="M16.708.027C18.453 0 20.188.016 21.921 0c.105 2.041.839 4.12 2.333 5.563c1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291c-.76-.344-1.468-.787-2.161-1.24c-.009 3.896.016 7.787-.025 11.667c-.104 1.864-.719 3.719-1.803 5.255c-1.744 2.557-4.771 4.224-7.88 4.276c-1.907.109-3.812-.411-5.437-1.369C4.307 29.027 2.412 26.12 2.136 23a22.3 22.3 0 0 1-.016-1.984c.24-2.537 1.495-4.964 3.443-6.615c2.208-1.923 5.301-2.839 8.197-2.297c.027 1.975-.052 3.948-.052 5.923c-1.323-.428-2.869-.308-4.025.495a4.618 4.618 0 0 0-1.819 2.333c-.276.676-.197 1.427-.181 2.145c.317 2.188 2.421 4.027 4.667 3.828c1.489-.016 2.916-.88 3.692-2.145c.251-.443.532-.896.547-1.417c.131-2.385.079-4.76.095-7.145c.011-5.375-.016-10.735.025-16.093z" fill="#fff" />
+                </svg></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/captainbarbershopid/"><span class="icon-instagram"></span></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.facebook.com/captainbarbershopid"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.youtube.com/channel/UCHAzgMBwMjTpIxH6YV51tGA"><span class="icon-youtube"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Selamat datang di <span>Captain</span> Barbershop</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center ftco-animate fadeInUp ftco-animated">
+          <p>Captain barbershop adalah tempat cukur rambut mewah terbesar di Indonesia. Sejak didirikan pada tahun 2015, Captain Barbershop telah berkembang menjadi 92 cabang di Jabodetabek, Karawang, Bandung, Surabaya, Medan dan Karawang. Pada tahun 2023 kami berencana untuk memperluas cabang kami hingga 100 cabang</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-bg-dark">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Pelayanan Kami</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <!-- <p class="mt-5">Berikut adalah layanan terbaik kami untuk anda</p> -->
+        </div>
+      </div>
+      <div class="our-service" style="margin-left: 20px;margin-right: 20px;">
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-scissor-and-comb"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Gentlemen Grooming</h3>
+              <p>Dimulai dengan membersihkan wajah dengan handuk dingin kemudian potong rambut lalu keramas, selanjutnya membersihkan wajah dengan handuk hangat, mendapatkan pijat kepala, leher dan bahu lalu diakhiri dengan pengaplikasian tonic dan pomade untuk styling.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-male-head-hair-and-beard"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Kids Haircut</h3>
+              <p>Pengalaman potong rambut yang ramah dan nyaman untuk si kecil.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-heads-hairs-and-scissors"></span></div>
+            <div class="media-body">
+              <h3 class="heading">Hair Tattoo</h3>
+              <p>Untuk kamu yang ingin mencari gaya rambut khas. Biarkan barberman kami yang terampil untuk membentuk dan merancang gaya rambut-mu seperti hasil mahakaryanya.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-scissor-and-comb"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Black Hair Coloring</h3>
+              <p>Ubah rambut ubanmu menjadi rambut hitam berkilau</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-young-male-short-irregular-hair-on-head-and-a-small-beard"></span></div>
+            <div class="media-body">
+              <h3 class="heading">Fashion Hair Color</h3>
+              <p>Warnai rambumu dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-scissor-and-comb"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Basic Hair Color</h3>
+              <p>Warnai rambutmu (tanpa dibleaching) dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-male-head-hair-and-beard"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Smoothing Hair Treatment</h3>
+              <p>Pelurusan rambut dengan hasil yang natural</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-heads-hairs-and-scissors"></span></div>
+            <div class="media-body">
+              <h3 class="heading">Perm Hair Treatment</h3>
+              <p>Pengeritingan rambut dengan hasil yang natural dan trendy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4">
+              <span class="flaticon-male-head-hair-and-beard"></span>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Anti-Dandruff Treatment</h3>
+              <p>Treatment untuk menghilangkan ketombe</p>
+            </div>
+          </div>
+        </div>
+        <div class="ftco-animate fadeInUp ftco-animated" style="margin-top: 25px;">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-heads-hairs-and-scissors"></span></div>
+            <div class="media-body">
+              <h3 class="heading">Hair Repair Treatment</h3>
+              <p>Treatment untuk rambut yang sudah rusak akibat bahan kimia yang berfungsi untuk mengembalikan kesehatan rambutmu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section" id="pricelist" style="padding-top: 0px;">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+        <div class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated">
+          <h2 class="mb-4">Paket & Harga</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <p class="mt-5">
+            <!-- Berikut adalah price list semua layanan kami -->
+          </p>
+          <botton class="btn btn-primary py-3 px-5 regular" style="margin-right: 25px;">Reguler</botton>
+          <botton class="btn btn-dark py-3 px-5 premiere">Premiere</botton>
+        </div>
+      </div>
+      <div class="row divRegular">
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Gentlemen Grooming</span></h3>
+              <span class="price">60k-70k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                A complete men’s grooming service. 
+Dimulai dengan membersihkan wajah dengan handuk dingin kemudian potong rambut lalu keramas, selanjutnya membersihkan wajah dengan handuk hangat, mendapatkan pijat kepala, leher dan bahu lalu diakhiri dengan pengaplikasian tonic dan pomade untuk styling.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Kids Haircut</span></h3>
+              <span class="price">60k-70k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pengalaman potong rambut yang ramah dan nyaman untuk si kecil.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Gentlemen Grooming & Hairspa</span></h3>
+              <span class="price">80k-90k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                A complete men’s grooming service with hairspa.
+Dimulai dengan membersihkan wajah dengan handuk dingin kemudian potong rambut lalu keramas, selanjutnya membersihkan wajah dengan  handuk hangat, lalu pengaplikasian masker rambut agar rambut sehat & ternutrisi, mendapatkan pijat kepala dan punggung lalu diakhiri dengan pengaplikasian tonik atau pomade.
+              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Gentlemen's Premium Package</span></h3>
+              <span class="price">120k-130k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Solusi perawatan rambut & wajah eksklusif. treatment yang kamu dapatkan: grooming, hair spa, sheet mask & hair loss serum.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Grooming + Hair Tattoo</span></h3>
+              <span class="price">130k-140k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Untuk kamu yang ingin mencari gaya rambut khas. Biarkan barberman kami yang terampil untuk membentuk dan merancang gaya rambut-mu seperti hasil mahakaryanya.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Black Hair Coloring</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Ubah rambut ubanmu menjadi rambut hitam berkilau
+
+              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Basic Hair Color</span></h3>
+              <span class="price">300k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Warnai rambutmu (tanpa dibleaching) dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.
+              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Fashion Hair Color</span></h3>
+              <span class="price">500k-800k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Warnai rambutmu dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Smoothing</span></h3>
+              <span class="price">350k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pelurusan rambut dengan hasil yang natural              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Perm Hair Treatment</span></h3>
+              <span class="price">350k-500k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pengeritingan rambut dengan hasil yang natural dan trendy              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Korean Perm</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Membuat rambut kamu terlihat lebih rata (tidak jigrak) dibagian samping (down perm) dan lebih bervolume juga berbentuk di bagian depan & atas rambut (root lift)              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Anti-Dandruff Treatment</span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Treatment untuk menghilangkan ketombe               </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Hair Repair Treatment</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Treatment untuk rambut yang sudah rusak akibat bahan kimia yang berfungsi untuk mengembalikan kesehatan rambutmu              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Hair Loss Serum Treatment</span></h3>
+              <span class="price">35k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Solusi untuk rambut rontok & tipis. Berguna untuk mengurangi kerontokan rambut              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Wash, Massage & Hairspa</span></h3>
+              <span class="price">50k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Diawali dengan pemijatan kepala dan punggung , lalu dapatkan rambut kilaumu yang lebih sehat dengan hairspa dan pengaplikasian tonik atau pomade              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Face Treatment with Gold Mask & Gold Serum</span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Kulit sehat, wajah sehat
+Treatment untuk mencerahkan & mengencangkan kulit wajah dengan serum emas berkualitas tinggi              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Black Pore Face Mask</span></h3>
+              <span class="price">40k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Komedo? Jangan khawatir.
+Treatment masker wajah ini bisa untuk menghilangkan komedo kamu.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Gentlemen Shave</span></h3>
+              <span class="price">35k </span>
+            </div>
+            <div class="d-block">
+              <p>
+                Dimulai dengan handuk panas untuk merilekskan kulit wajah dan membuka pori-pori wajah lalu diikuti dengan pencukuran yang  nyaman.              </p>
+            </div>
+          </div>
+              </div>
+      <div class="row divPremiere" style="display: none;">
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Premium Grooming</span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Dimulai dengan membersihkan wajah dengan handuk dingin kemudian potong rambut lalu keramas, selanjutnya membersihkan wajah dengan handuk hangat, mendapatkan pijat kepala, leher dan bahu lalu diakhiri dengan pengaplikasian tonic dan pomade untuk styling.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Kids Haircut</span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pengalaman potong rambut yang ramah dan nyaman untuk si kecil.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Premium Grooming + Hair Tattoo</span></h3>
+              <span class="price">170k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Untuk kamu yang ingin mencari gaya rambut khas. Biarkan barberman kami yang terampil untuk membentuk dan merancang gaya rambut-mu seperti hasil mahakaryanya.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Gentlemen's Premium Package</span></h3>
+              <span class="price">160k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Solusi perawatan rambut & wajah eksklusif. treatment yang kamu dapatkan: grooming, hair spa, sheet mask & hair loss serum.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Smoothing</span></h3>
+              <span class="price">350k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pelurusan rambut dengan hasil yang natural              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Perm Hair Treatment</span></h3>
+              <span class="price">350k-500k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pengeritingan rambut dengan hasil yang natural dan trendy              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Black Hair Coloring</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Ubah rambut ubanmu menjadi rambut hitam berkilau
+
+              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Basic Hair Color</span></h3>
+              <span class="price">300k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Warnai rambutmu (tanpa dibleaching) dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.
+              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Korean Perm</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Membuat rambut kamu terlihat lebih rata (tidak jigrak) dibagian samping (down perm) dan lebih bervolume juga berbentuk di bagian depan & atas rambut (root lift)              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Fashion Hair Color</span></h3>
+              <span class="price">500k-800k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Warnai rambutmu dengan sempurna sesuai dengan warna idaman-mu dengan barberman kami yang sudah berpengalaman.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Anti-Dandruff Treatment </span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Treatment untuk menghilangkan ketombe              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Hair Repair Treatment</span></h3>
+              <span class="price">150k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Treatment untuk rambut yang sudah rusak akibat bahan kimia yang berfungsi untuk mengembalikan kesehatan rambutmu              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Hair Loss Serum Treatment</span></h3>
+              <span class="price">35k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Solusi untuk rambut rontok & tipis. Berguna untuk mengurangi kerontokan rambut              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Premium Black Hair Spa</span></h3>
+              <span class="price">20k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Pijat punggung Anda dan buat rambut Anda lebih bersinar dengan hairspa dan aplikasi tonik atau pomade              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Wash, Massage & Hairspa </span></h3>
+              <span class="price">50k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Diawali dengan pemijatan kepala dan punggung , lalu dapatkan rambut kilaumu yang lebih sehat dengan hairspa dan pengaplikasian tonik atau pomade              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Face Treatment with Gold Mask & Gold Serum</span></h3>
+              <span class="price">100k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Kulit sehat, wajah sehat
+Treatment untuk mencerahkan & mengencangkan kulit wajah dengan serum emas berkualitas tinggi              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Black Pore Face Mask</span></h3>
+              <span class="price">50k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Komedo? Jangan khawatir.
+Treatment masker wajah ini bisa untuk menghilangkan komedo kamu.              </p>
+            </div>
+          </div>
+                  <div class="col-md-6 pricing-entry ftco-animate fadeInUp ftco-animated">
+            <div class="d-flex text align-items-center">
+              <h3><span>Traditional Shave</span></h3>
+              <span class="price">65k</span>
+            </div>
+            <div class="d-block">
+              <p>
+                Dimulai dengan handuk panas untuk merilekskan kulit wajah dan membuka pori-pori wajah lalu diikuti dengan pencukuran yang nyaman.              </p>
+            </div>
+          </div>
+              </div>
+      <div class="row">
+        <div class="col-md-6 text-center ftco-animate fadeInUp ftco-animated">
+          <p>*Harga tersebut tidak termasuk di Pakubuwono</p>
+        </div>
+        <div class="col-md-6 text-center ftco-animate fadeInUp ftco-animated">
+          <!-- <p>** Karena pandemi Covid19, layanan ini tidak tersedia</p> -->
+        </div>
+        <div class="col-md-6 text-left ftco-animate fadeInUp ftco-animated">
+          <p>Harga 70k Gentlemen Grooming & Kids Haircut untuk di cabang : Bintaro Sektor 2, Bintaro Sektor 9, Bogor Bangbarung, Bogor Bondongan, Bogor Yasmin, Cipinang, City Resort, Danau Sunter, Dutamas, Gading Serpong, Galaxy, G-Walk Surabaya, Goldfinch, Greenlake, Harapan Indah, Karawaci Kelapa Gading, Lippo Cikarang, Pasar Baru, Sunter Agung, Sunter Griya & Taman Palem</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-bg-dark" id="youtube">
+    <div class=" container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Youtube</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <!-- <p class="mt-5">Berikut adalah tamu spesial di Captain Barbershop.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="youtube-slide" style="margin-left: 20px;margin-right: 20px;">
+
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wY_3U_MRE3I?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="text-left">
+                <h5>Korean Natural Look Review Potongan Rambut By Yogi Ang</h5>
+                <p>Halo Captain, kembali lagi di YouTube Channel Captain Barbershop!</p>
+                <p>Pengen keliatan kaya Artis Korea ngga perlu operasi plastik, Cap! Buat beberapa orang dengan cukur rambut aja bisa kelihatan kaya Artis Korea. Nah terus harus dicukur kaya apa dong? Simak video ini buat ngeliat salah satu rekomendasi potongan rambut ala Artis Korea.</p>
+                <h5><a class="text-white" href="https://www.youtube.com/watch?v=wY_3U_MRE3I">READ MORE</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/7vUSTsaytmE?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="text-left">
+                <h5>Tampil Beda Dengan Keriting Rambut - Hair Perming Tips & Tutorial by Yogi Ang</h5>
+                <p>Halo Captain, kembali lagi di YouTube Channel Captain Barbershop!</p>
+                <p>Kali ini kita akan ngasih kalian video salah satu klien special Captain Barbershop, namanya Eno. Eno ini salah satu selebgram yang cukup populer di Indonesia, Cap. Ngga cuma cukur, Eno juga nge-perming rambutnya di Barber kita. Denger-denger, hair perming lagi jadi trend rambut pria di 2021 Cap! Kaya apa sih hair perming di Captain Barbershop? Cekidot, Captain!</p>
+                <h5><a class="text-white" href="https://www.youtube.com/watch?v=7vUSTsaytmE">READ MORE</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/uGDZ-ZbxcyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="text-left">
+                <h5>100% GANTENG MAKSIMAL! - CAPTAIN BARBERSHOP</h5>
+                <p>HHi Gentlemen!</p>
+                <p>Salah satu hal yang paling ditakuti pria adalah mengalami kebotakan dini. Namun tidak usah khawatir lagi gentlemen, kalian bisa coba Hair System dari Captain Barbershop!</p>
+                <p>"Our hair system made from high quality material, use 100% natural looking hair, provide natural hair line, give a realistic look, and super affordable. That makes them one of the best hair toupees for men"</p>
+                <h5><a class="text-white" href="https://www.youtube.com/watch?v=uGDZ-ZbxcyU">READ MORE</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/xu5e_u7jI9k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="text-left">
+                <h5>DARI KRIBO JADI LURUS, SEPERTI KEHIDUPAN! WOW SMOOTHING RAMBUT TEBAL BANGET!</h5>
+                <p>Halo Captain, kembali lagi di YouTube Channel Captain Barbershop!</p>
+                <p>Kali ini kita akan ngasih kalian video salah satu klien Captain Barbershop. Klien kita ini pengen banget smoothing rambut untuk kesekian kalinya. Karena udah lama ngga di-smoothing, rambutnya jadi kribo, mekar, cetar membahana. Jangan salah paham, hasilnya oke punya, Cap! Smoothing kali ini dilakukan oleh Barberman kita yang namanya Yudi. Dengan pengawasan, dari Pak Yogi. Penasaran hasilnya? Cekidot, Captain!</p>
+                <h5><a class="text-white" href="https://www.youtube.com/watch?v=xu5e_u7jI9k&t=1s">READ MORE</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/8bgrGwTVT_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="text-left">
+                <h5>Ash Gray Buat Tim Atta Halilintar - Hair Coloring Tips & Tutorial by Yogi Ang</h5>
+                <p>Halo Captain, kembali lagi di YouTube Channel Captain Barbershop!</p>
+                <p>Hair coloring warna apa sih yang lagi tren sekarang ini? Ash gray bisa jadi salah satunya, Cap! Model kita kali ini namanya Panji, salah satu Tim Atta Halilintar yang juga populer di media sosial. Rambutnya kita warnain dan pastinya dicukur juga. Penasaran kaya apa hasil akhirnya? Cekidot, Captain!</p>
+                <h5><a class="text-white" href="https://www.youtube.com/watch?v=8bgrGwTVT_A&t=1s">READ MORE</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section">
+    <div class=" container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Tamu Spesial</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <!-- <p class="mt-5">Berikut adalah tamu spesial di Captain Barbershop.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="spesial-guest" style="margin-left: 20px;margin-right: 20px;">
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Pak-Jokowi.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">President Joko Widodo</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Kaesang.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Kaesang Pangarep</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Boy-William.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Boy Wiliam</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Rich-Chigga-1.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Rich Bryan</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Andre-Taulany.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Andre Taulany</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Donnie-Sibarani.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Donnie Sibarani</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Winson.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Winson</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Rayi-RAN.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Rayi RAN</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Kunto-Aji.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Kunto Aji</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Kiesha-Alvaro.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Kiesha Alvaro</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Irvan-Farhad-1.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Irvan Farhad</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Gunawan-Dwi-Cahyo.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Gunawan Dwi Cahyo</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Ferry-Maryadi-1.jpg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Ferry Maryadi</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Jesen-1.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Jesen</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Mischa-2.jpg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Mischa</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/Narendra-Pawaka-1.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Narendra Pawaka</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/guest/teddy-syach-1.jpeg);"></div>
+            <div class="info text-center">
+              <h3><a href="#">Teddy Syach</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-bg-dark">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Kolaborasi</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <!-- <p class="mt-5">Berikut adalah kolaborasi kami dengan berbagai pihak.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="kolaborasi" style="margin-left: 20px;margin-right: 20px;">
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/CL0TD4BnK7L/?utm_source=ig_web_copy_link">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/yamaha.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="https://www.instagram.com/p/CL0TD4BnK7L/?utm_source=ig_web_copy_link">Yamaha</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/CHR1Cq_nF6L/?utm_source=ig_web_copy_link">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/mensbiore.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="https://www.instagram.com/p/CHR1Cq_nF6L/?utm_source=ig_web_copy_link">Men’s Biore</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/BxTkxr6n5-I/?utm_source=ig_web_copy_link">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/oreo.png);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="https://www.instagram.com/p/BxTkxr6n5-I/?utm_source=ig_web_copy_link">Oreo</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/CFwkO2IHfyt/?utm_source=ig_web_copy_link">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/cadbury.png);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="https://www.instagram.com/p/CFwkO2IHfyt/?utm_source=ig_web_copy_link">Cadburry</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/B8xjM2ZnCDL/?utm_source=ig_web_copy_link">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/cosmo.png);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="https://www.instagram.com/p/B8xjM2ZnCDL/?utm_source=ig_web_copy_link">Cosmo Futsal</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="#">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/unilever.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">Unilever</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="#">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/abonku.png);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">Abnonku 2019</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="#">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/net.jpeg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">Net TV</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/CNXLzBzHg9I/">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/hiserha.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">HIS ERHA</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="https://www.instagram.com/p/CR1AFauHHAK/">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/tezzen.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">TEZZEN</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="#">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/hmns.jpg);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">HMNS</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated">
+          <div class="staff">
+            <a href="#">
+              <div class="img mb-4" style="background-image: url(http://captainbarbershop.co.id/assets-frontend/images/collabs/gtv.png);"></div>
+            </a>
+            <div class="info text-center">
+              <h3><a href="#">GTV</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section" style="padding-bottom: 0px;">
+    <div class=" container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-4">Testimoni</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <!-- <p class="mt-5">Berikut adalah apa kata pelanggan kami.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="testimoni" style="margin-left: 20px;margin-right: 20px;">
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Puas Banget</div>
+                <div class="review-item__text">“Waktu pertama nyoba gratis potong, setelah itu jadi berlangganan kurang lebih 3 tahun”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@aldorz</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Layanan Lengkap</div>
+                <div class="review-item__text">“murah, nyaman, dan layanannya lengkap serta hasil potongannya selalu pas dan sesuai ekspektasi”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@hrahardy</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Hasil Memuaskan</div>
+                <div class="review-item__text">“cocok guntingannya, saya udah jadi pelanggan captain dari awal baru punya 1 cabang di sunter indah”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@nzaahwijaya</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Pelayanan Ramah</div>
+                <div class="review-item__text">“capsternya ramah dan enak untuk diajak berkomunikasi dan menyesuaikan apa yang kita mau”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@nathanalviand</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Pelayanan TOP</div>
+                <div class="review-item__text">“Rasanya berbeda dari tempat yang lain, pelayanannya TOP markotop”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@03.wan</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Puas Banget</div>
+                <div class="review-item__text">“Serasa jadi tambah muda”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@phangedwin16</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Mantaap Sekali</div>
+                <div class="review-item__text">“Tinggal datang duduk pulang-pulang jadi ganteng”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@nescfebri</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Sangat Menyenangkan</div>
+                <div class="review-item__text">“Menyenangkan potong rambut di Captain Barbershop”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@arthur.nicholas</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Servis Memuaskan</div>
+                <div class="review-item__text">“Ingin balik lagi berkunjung karena servisnya memuaskan”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@rudy_as</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Puas Banget </div>
+                <div class="review-item__text">“fresh banget seger, mantap deh Captain Barbershop”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@jordifernando7</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-sm-5 ftco-animate fadeInUp ftco-animated item1">
+          <div class="staff">
+            <div class="review-item">
+              <div class="review-item__box">
+                <div class="review-item__title">Mantaap Banget</div>
+                <div class="review-item__text">“pomade yang dijual berkualitas, servisnya juga bagus”</div>
+                <div class="review-item__user">
+                  <div class="review-item__avatar"><img src="https://kertaspedia.com/captainbarbershop/assets-frontend/review-avatar-1.png" alt="review-avatar"></div>
+                  <div class="review-item__info">
+                    <div class="review-item__name">@jonathan_angelito17</div>
+                    <div class="review-item__position">Instagram</div>
+                  </div>
+                  <div class="review-item__stars"> <img src="https://kertaspedia.com/captainbarbershop/assets-frontend/stars.svg" alt="stars"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+        <h2 class="mb-4">Recent from blog</h2>
+        <p>Berikut adalah trend rambut kekinian ala Captain Barbershop</p>
+      </div>
+    </div>
+    <div class="row d-flex">
+              <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+          <div class="blog-entry align-self-stretch">
+            <a href="http://captainbarbershop.co.id/detail/5-gaya-rambut-ikal-harry-styles-yang-keren-untuk-kamu-tiru" class="block-20" style="background-image: url(http://captainbarbershop.co.id/uploads/blog/257F7313F2307DB4045FB7EBFAB0F6A6.jpg);">
+            </a>
+            <div class="text py-4 d-block">
+              <div class="meta">
+                <div><a href="http://captainbarbershop.co.id/detail/5-gaya-rambut-ikal-harry-styles-yang-keren-untuk-kamu-tiru">January 26</a></div>
+                <div><a href="http://captainbarbershop.co.id/detail/5-gaya-rambut-ikal-harry-styles-yang-keren-untuk-kamu-tiru">Admin</a></div>
+              </div>
+              <h3 class="heading mt-2"><a href="http://captainbarbershop.co.id/detail/5-gaya-rambut-ikal-harry-styles-yang-keren-untuk-kamu-tiru">5 Gaya Rambut Ikal Harry Styles yang Keren Untuk Kamu Tiru</a></h3>
+              <p>
+                <p>Siapa yang tak mengenal Harry Styles? Penyanyi berumur 25 tahun yang terkenal berkat grup One Direction ini memang punya suara yang oke dan wajah y ...              </p>
+            </div>
+          </div>
+        </div>
+              <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+          <div class="blog-entry align-self-stretch">
+            <a href="http://captainbarbershop.co.id/detail/7-transformasi-gaya-rambut-artis-makin-ganteng-setelah-jadi-ayah" class="block-20" style="background-image: url(http://captainbarbershop.co.id/uploads/blog/blog1.jpg);">
+            </a>
+            <div class="text py-4 d-block">
+              <div class="meta">
+                <div><a href="http://captainbarbershop.co.id/detail/7-transformasi-gaya-rambut-artis-makin-ganteng-setelah-jadi-ayah">January 17</a></div>
+                <div><a href="http://captainbarbershop.co.id/detail/7-transformasi-gaya-rambut-artis-makin-ganteng-setelah-jadi-ayah">Admin</a></div>
+              </div>
+              <h3 class="heading mt-2"><a href="http://captainbarbershop.co.id/detail/7-transformasi-gaya-rambut-artis-makin-ganteng-setelah-jadi-ayah">7 Transformasi Gaya Rambut Artis, Makin Ganteng Setelah Jadi Ayah</a></h3>
+              <p>
+                <p>Ingin mencari inspirasi gaya rambut artis pria untuk mengganti penampilanmu? Gaya rambut para artis memang selalu menarik untuk kita jadikan pandua ...              </p>
+            </div>
+          </div>
+        </div>
+              <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+          <div class="blog-entry align-self-stretch">
+            <a href="http://captainbarbershop.co.id/detail/6-cara-meluruskan-rambut-pria-dari-catok-masker-hingga-krim-pelurus-rambut" class="block-20" style="background-image: url(http://captainbarbershop.co.id/uploads/blog/6646F73846260C2A092F93A1BAC163B9.jpg);">
+            </a>
+            <div class="text py-4 d-block">
+              <div class="meta">
+                <div><a href="http://captainbarbershop.co.id/detail/6-cara-meluruskan-rambut-pria-dari-catok-masker-hingga-krim-pelurus-rambut">January 17</a></div>
+                <div><a href="http://captainbarbershop.co.id/detail/6-cara-meluruskan-rambut-pria-dari-catok-masker-hingga-krim-pelurus-rambut">Admin</a></div>
+              </div>
+              <h3 class="heading mt-2"><a href="http://captainbarbershop.co.id/detail/6-cara-meluruskan-rambut-pria-dari-catok-masker-hingga-krim-pelurus-rambut">6 Cara Meluruskan Rambut Pria Dari Catok, Masker, Hingga Krim Pelurus Rambut</a></h3>
+              <p>
+                <p>Terkadang, memiliki rambut idaman tidak selamanya mudah. Seringkali saat membentuk, gaya rambutmu malah&nbsp;<em>mentok&nbsp;</em>karena tekstur ra ...              </p>
+            </div>
+          </div>
+        </div>
+          </div>
+  </div>
+</section> -->
+
+  <footer class="ftco-footer ftco-section img" style="padding-bottom: 15px;">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">TENTANG KAMI</h2>
+          <p>PT.Captain Asia Sukses adalah perusahaan yang bergerak dibidang jasa (Barbershop) bernama Captain Barbershop. Captain didirikan pada 27 September 2015.</p>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.tiktok.com/@captainbarbershopid?lang=en" style="padding-left: 12px; padding-top: 12px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                  <path d="M16.708.027C18.453 0 20.188.016 21.921 0c.105 2.041.839 4.12 2.333 5.563c1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291c-.76-.344-1.468-.787-2.161-1.24c-.009 3.896.016 7.787-.025 11.667c-.104 1.864-.719 3.719-1.803 5.255c-1.744 2.557-4.771 4.224-7.88 4.276c-1.907.109-3.812-.411-5.437-1.369C4.307 29.027 2.412 26.12 2.136 23a22.3 22.3 0 0 1-.016-1.984c.24-2.537 1.495-4.964 3.443-6.615c2.208-1.923 5.301-2.839 8.197-2.297c.027 1.975-.052 3.948-.052 5.923c-1.323-.428-2.869-.308-4.025.495a4.618 4.618 0 0 0-1.819 2.333c-.276.676-.197 1.427-.181 2.145c.317 2.188 2.421 4.027 4.667 3.828c1.489-.016 2.916-.88 3.692-2.145c.251-.443.532-.896.547-1.417c.131-2.385.079-4.76.095-7.145c.011-5.375-.016-10.735.025-16.093z" fill="#fff" />
+                </svg></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/captainbarbershopid/"><span class="icon-instagram"></span></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.facebook.com/captainbarbershopid"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.youtube.com/channel/UCHAzgMBwMjTpIxH6YV51tGA"><span class="icon-youtube"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">TAUTAN LANGSUNG</h2>
+          <ul class="list-unstyled">
+            <li><a href="http://captainbarbershop.co.id/tentang" class="py-2 d-block">Perusahaan</a></li>
+            <li><a href="http://captainbarbershop.co.id/trend" class="py-2 d-block">Tren Rambut</a></li>
+            <li><a href="http://captainbarbershop.co.id/faq" class="py-2 d-block">FAQ</a></li>
+            <li><a href="http://captainbarbershop.co.id/kontak" class="py-2 d-block">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">PUNYA PERTANYAAN?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Jl. Samanhudi No.49-51, Pasar Baru. Jakarta Pusat. 10710</span></li>
+              <li><a href="https://wa.me/6281280777736"><span class="icon icon-whatsapp"></span><span class="text">0812 8077 7736</span></a></li>
+              <li><a href="mailto:cs@captainbarbershop.co.id"><span class="icon icon-envelope"></span><span class="text">cs@captainbarbershop.co.id</span></a></li>
+            </ul>
+          </div>
+          <!-- <h2 class="ftco-heading-2">STATISTIK PENGUNJUNG</h2>
+          <table id="foot-table-list" style="color:white">
+            <tr>
+              <td>Pengunjung Hari ini</td>
+              <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+              <td>1982 orang</td>
+            </tr>
+            <tr>
+              <td>Total Pengunjung</td>
+              <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+              <td>411404 orang</td>
+            </tr>
+            <tr>
+              <td>Pengunjung Online</td>
+              <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+              <td>12 orang</td>
+            </tr>
+            <tr>
+              <td>Total Hits Halaman</td>
+              <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+              <td>912567</td>
+            </tr>
+          </table> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-left">
+        Pilih Bahasa : <br>
+        <a href="http://captainbarbershop.co.id/bahasa/gantibahasa/indonesia">
+          <object data="http://captainbarbershop.co.id/uploads/flag/ind.svg" type="image/svg+xml" style="height: 25px;pointer-events: none;"></object>
+        </a>
+        <a href="http://captainbarbershop.co.id/bahasa/gantibahasa/inggris">
+          <object data="http://captainbarbershop.co.id/uploads/flag/eng.svg" type="image/svg+xml" style="height: 25px;pointer-events: none;"></object>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          Copyright ©<script type="text/javascript" async="" src="http://captainbarbershop.co.id/assets-frontend/analytics.js"></script>
+          <script>
+            document.write(new Date().getFullYear());
+          </script> All rights reserved | PT. Captain Asia Sukses
+        </p>
+      </div>
+    </div>
+  </div>
+  <div style="position:fixed;right:10px;bottom:10px;">
+    <a href="https://wa.me/6281280777736" style="display: table;font-family: sans-serif;text-decoration: none;margin: 1em 0.5em auto;color: #fff;font-size: 2.4em;padding: 1em 0.3em 1.3em 3em;border-radius: 2em;font-weight: bold;background: url('https://cdn-icons-png.flaticon.com/128/2504/2504957.png') no-repeat 1.5em center;background-size: 1.6em;"></a>
+  </div>
+</footer>
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function() {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6004fe86c31c9117cb6f98b4/1es9o4fc7';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script> -->
+<!--End of Tawk.to Script-->
+  <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
+    </svg></div>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery-migrate-3.0.1.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/popper.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/bootstrap.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.easing.1.3.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.waypoints.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.stellar.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/owl.carousel.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.magnific-popup.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/aos.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.animateNumber.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/bootstrap-datepicker.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/jquery.timepicker.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/scrollax.min.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/google-map.js"></script>
+  <script src="http://captainbarbershop.co.id/assets-frontend/main.js"></script>
+
+  <script src="http://captainbarbershop.co.id/assets-frontend/slick/slick.min.js"></script>
+
+  <script async="" src="http://captainbarbershop.co.id/assets-frontend/js(1)"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script>
+
+  <script>
+    var time = 1;
+    var interval = setInterval(function() {
+      if (time <= 3) {
+        if (time == 1) {
+          $('.sliderManual').css('background-image', 'url(https://kertaspedia.com/captainbarbershop/assets-frontend/images/bg_1.jpg)');
+        } else if (time == 2) {
+          $('.sliderManual').css('background-image', 'url(https://kertaspedia.com/captainbarbershop/assets-frontend/images/bg_2.jpg)');
+        } else {
+          $('.sliderManual').css('background-image', 'url(https://kertaspedia.com/captainbarbershop/assets-frontend/images/bg_3.jpg)');
+        }
+        time++;
+      } else {
+        time = 0;
+      }
+    }, 4000);
+  </script>
+  <script type="text/javascript" src="http://captainbarbershop.co.id/assets-frontend/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.our-service').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+      $('.spesial-guest').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+      $('.kolaborasi').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+      $('.testimoni').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+      $('.youtube-slide').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+      $('.regular').click(function() {
+        $('.regular').addClass('btn-primary');
+        $('.regular').removeClass('btn-dark');
+        $('.premiere').removeClass('btn-primary');
+        $('.premiere').addClass('btn-dark');
+        $('.divRegular').show('slow');
+        $('.divPremiere').hide('slow');
+      });
+      $('.premiere').click(function() {
+        $('.premiere').addClass('btn-primary');
+        $('.premiere').removeClass('btn-dark');
+        $('.regular').removeClass('btn-primary');
+        $('.regular').addClass('btn-dark');
+        $('.divPremiere').show('slow');
+        $('.divRegular').hide('slow');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

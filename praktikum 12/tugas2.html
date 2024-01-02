@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        fieldset {
+            border: 1px solid #010101;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        #amount {
+            width: 200px; 
+            height: 35px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #currency{
+            width: 200px;
+            height: 35px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        
+        <table>
+            <tr>
+                <td>
+                    <label for="amount">Masukkan nilai mata uang </label>
+                </td>
+                <td>
+                    <label for="currency">Pilih mata uang</label>
+                </td>
+                <td colspan="2">Hasil Konversi</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="amount" placeholder="Masukkan nilai..." oninput="convertCurrency()">
+                </td>
+                <td>
+                    <select id="currency" onchange="convertCurrency()">
+                        <option value="usd">Dollar US</option>
+                        <option value="sgd">Dollar Singapore</option>
+                        <option value="myr">Ringgit Malaysia</option>
+                        <option value="jpy">Yen Jepang</option>
+                        <option value="eur">Euro</option>
+                        <option value="sar">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td colspan="2" id="result">Nilai Rupiah akan muncul di sini.</td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <script>
+        function convertCurrency() {
+            var amount = parseFloat(document.getElementById('amount').value);
+            var currency = document.getElementById('currency').value;
+            var rate;
+
+            switch (currency) {
+                case 'usd':
+                    rate = 9915;
+                    break;
+                case 'sgd':
+                    rate = 13472;
+                    break;
+                case 'myr':
+                    rate = 874;
+                    break;
+                case 'jpy':
+                    rate = 120;
+                    break;
+                case 'eur':
+                    rate = 15888;
+                    break;
+                case 'sar':
+                    rate = 3592;
+                    break;
+                default:
+                    rate = 1;
+            }
+
+            var result = amount * rate;
+            document.getElementById('result').innerText = "Nilai Rupiah : " + result.toFixed(2) + "IDR";
+        }
+    </script>
+</body>
+</html>
